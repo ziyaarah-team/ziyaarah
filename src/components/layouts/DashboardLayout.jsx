@@ -1,18 +1,17 @@
-
 import Navbar from "../layout/Navbar";
 import Sidebar from "../layout/Sidebar";
-import { Outlet } from "react-router-dom";
 
 export default function DashboardLayout() {
   return (
     <>
       <Navbar />
 
-      <div style={{ display: "flex" }}>
+      <div className="dashboard-layout">
         <Sidebar />
 
-        <main style={{ padding: "20px", flex: 1 }}>
-          <Outlet />
+        <main className="dashboard-content">
+          <h1>Dashboard</h1>
+          <p>Welcome to Ziyaarah Dashboard</p>
         </main>
       </div>
     </>

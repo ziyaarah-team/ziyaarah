@@ -1,0 +1,51 @@
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo-section h2 {
+  color: #0f9d58;
+  font-size: 28px;
+  margin: 0;
+}
+
+.logo-section span {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0f9d58;
+}
+
+.sign-in-btn {
+  background: #0f9d58;
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.sign-in-btn:hover {
+  background: #0c7f47;
+}
