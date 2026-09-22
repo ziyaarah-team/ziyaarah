@@ -40,7 +40,8 @@ const setAuth = useAuthStore((state) => state.setAuth);
 
     
         setError("");
-         const data = await registerUser(email, password);
+      
+         const data = await registerUser(fullName,email, password);
          setAuth(data.token,{
             fullName,
             email,

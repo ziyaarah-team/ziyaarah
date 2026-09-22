@@ -1,12 +1,13 @@
-const API_URL = "https://reqres.in/api";
+const API_URL = "https://ziyaarah.vercel.app";
 
-export const registerUser = async (email, password) => {
-  const response = await fetch(`${API_URL}/register`, {
+export const registerUser = async (fullName, email, password) => {
+  const response = await fetch(`${API_URL}/auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+      name: fullName,
       email,
       password,
     }),
@@ -22,7 +23,7 @@ export const registerUser = async (email, password) => {
 };
 
 export const loginUser = async (email, password) => {
-  const response = await fetch(`${API_URL}/login`, {
+  const response = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
