@@ -9,7 +9,7 @@ import AboutUs from "../pages/AboutUs";
 import Prayers from "../pages/Prayers";
 import Events from "../pages/Events";
 import Contact from "../pages/Contact";
-
+import Resources from"../pages/Resources";
 export default function AppRoutes() {
   return (
     <Routes>
@@ -23,6 +23,7 @@ export default function AppRoutes() {
       <Route path="/prayers" element={<Prayers />} />
       <Route path="/events" element={<Events />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/resources" element={<Resources/>}/>
     </Routes>
   );
 }
