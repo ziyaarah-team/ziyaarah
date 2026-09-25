@@ -1,5 +1,6 @@
 import Navbar from "../layout/Navbar";
 import "../styles/Home.css";
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
         <> 
@@ -130,11 +131,11 @@ export default function Home() {
    <p> join thousands of Muslims who have prepared for their sacred
          journey with Ziyaarah. Start planning your Hajj or Umrah today
         with our comprehensive tools and guidance.</p>
-    <button className="cta-btn">
- Create Your Account
-    </button>
-  </div>
-  </div>
+        </div>
+        </div>
+   <Link to="/register" className="cta-btn">
+  Create Your Account
+</Link>
   <div className="cta-image">
    <img src="/images/madinah.jpg" alt="Madinah" />
   </div>

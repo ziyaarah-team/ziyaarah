@@ -208,7 +208,7 @@ export default function RitualTracker() {
                 Dashboard
               </Link>
 
-              <Link to="/trip-planner">
+              <Link to="/trips">
                 <span>▣</span>
                 Trip Planner
               </Link>

@@ -345,3 +345,112 @@
 .footer-links a:hover {
   color: #16a34a;
 }
+/* =========================
+   RESPONSIVE HOME PAGE
+========================= */
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 50px 30px;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-banner {
+    margin: 60px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    height: auto;
+  }
+
+  .features-section,
+  .journey-section,
+  .quick-links {
+    padding: 50px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-cards {
+    flex-direction: column;
+  }
+
+  .journey-arrow {
+    transform: rotate(90deg);
+  }
+
+  .cta-banner {
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 20px;
+  }
+
+  .cta-content {
+    padding: 30px 20px;
+  }
+
+  .links-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .features-header h2,
+  .journey-header h2 {
+    font-size: 28px;
+  }
+
+  .btn,
+  .cta-btn {
+    width: 100%;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 10px 0;
+  }
+}
