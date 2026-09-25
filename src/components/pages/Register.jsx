@@ -50,6 +50,7 @@ const setAuth = useAuthStore((state) => state.setAuth);
 
         alert("Registration successful!");
   window.location.href = "/";
+  window.location.href = "/dashboard";
 }
 catch (error) {
       setError(error.message);

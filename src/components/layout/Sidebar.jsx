@@ -1,76 +1,73 @@
-import { NavLink, Link } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import useAuthStore from "../../store/authStore";
 import "../styles/sidebar.css";
 
 export default function Sidebar() {
+  const user = useAuthStore((state) => state.user);
+  const logout = useAuthStore((state) => state.logout);
+
   return (
     <aside className="sidebar">
-      <div className="sidebar-top">
-
-        {/* Logo */}
-        <div className="sidebar-logo">
-          <div className="brand-logo-icon">
-            <i className="fa-solid fa-kaaba"></i>
-          </div>
+      {/* SIDEBAR */}
+      <div>
+        <div className="side-brand">
+          <div className="side-brand-icon">✧</div>
 
           <div>
-            <h2>Ziyaarah</h2>
-            <p>Journey Planner</p>
+            <strong>Ziyaarah</strong>
+            <span>Journey Planner</span>
           </div>
         </div>
 
-        {/* Main Navigation */}
-        <ul className="sidebar-links">
-          <li>
-            <NavLink to="/dashboard">
-              <i className="fa-solid fa-house"></i>
-              <span>Dashboard</span>
-            </NavLink>
-          </li>
+        <nav className="sidebar-nav">
+          <Link to="/dashboard">
+            <span className="nav-icon">⌂</span>
+            Dashboard
+          </Link>
 
-          <li>
-            <NavLink to="/trips">
-              <i className="fa-solid fa-calendar-days"></i>
-              <span>Trip Planner</span>
-            </NavLink>
-          </li>
+          <Link to="/trips">
+            <span className="nav-icon">▣</span>
+            Trip Planner
+          </Link>
 
-          <li>
-            <NavLink to="/rituals">
-              <i className="fa-solid fa-circle-check"></i>
-              <span>Ritual Tracker</span>
-            </NavLink>
-          </li>
+          <Link to="/ritual-tracker">
+            <span className="nav-icon">✓</span>
+            Ritual Tracker
+          </Link>
 
-          <li>
-            <NavLink to="/resources">
-              <i className="fa-solid fa-book-open"></i>
-              <span>Resources</span>
-            </NavLink>
-          </li>
-        </ul>
-
+          <Link to="/resources">
+            <span className="nav-icon">▤</span>
+            Resources
+          </Link>
+        </nav>
       </div>
 
       {/* Sidebar Footer */}
       <div className="sidebar-footer">
-
         {/* User Profile */}
         <div className="user-profile">
-          <div className="user-avatar">A</div>
+          <div className="user-avatar">
+            {user?.fullName?.charAt(0).toUpperCase() || "U"}
+          </div>
 
           <div className="user-info">
-            <h4>Amina</h4>
-            <p>mariam@gmail.com</p>
+            <h4>{user?.fullName || "User"}</h4>
+            <p>{user?.email || "No email"}</p>
           </div>
         </div>
 
         {/* Sign Out */}
-        <Link to="/login" className="sign-out-btn">
+        <button
+          type="button"
+          className="sign-out-btn"
+          onClick={() => {
+            logout();
+            window.location.href = "/login";
+          }}
+        >
           <i className="fa-solid fa-arrow-right-from-bracket"></i>
           <span>Sign Out</span>
-        </Link>
-
+        </button>
       </div>
     </aside>
   );

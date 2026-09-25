@@ -93,7 +93,7 @@ export default function TripPlanner() {
                 Dashboard
               </Link>
 
-              <Link to="/trip-planner" className="active">
+              <Link to="/trips" className="active">
                 <span className="nav-icon">▣</span>
                 Trip Planner
               </Link>
@@ -116,11 +116,6 @@ export default function TripPlanner() {
             <div className="trip-profile">
               <div className="trip-avatar">
                 A
-              </div>
-
-              <div>
-                <strong>amina</strong>
-                <span>amina@gmail.com</span>
               </div>
             </div>
 
