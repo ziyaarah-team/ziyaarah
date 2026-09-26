@@ -454,3 +454,85 @@
     margin: 10px 0;
   }
 }
+.hero-image {
+  flex: 1;
+  max-width: 700px;
+  position: relative; 
+}
+
+.hero-image img {
+  width: 100%;
+  height: 450px;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* (Journey Complete) */
+.hero-image .journey-card {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: #ffffff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-image .sacred-card {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: #ffffff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-image .journey-card span {
+  background: #e5f8f0;
+  color: #087f5b;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.hero-image .sacred-card span {
+  background: #fff8e6;
+  color: #f59e0b;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.hero-image .journey-card div,
+.hero-image .sacred-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image .journey-card strong,
+.hero-image .sacred-card strong {
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.hero-image .journey-card small,
+.hero-image .sacred-card small {
+  font-size: 12px;
+  color: #6b7280;
+}

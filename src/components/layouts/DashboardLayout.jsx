@@ -1,9 +1,10 @@
-import React from 'react';
+
 import Sidebar from '../layout/Sidebar';
 import '../styles/Dashboard.css'; 
 
 export default function DashboardLayout() {
-  return (<div className="dashboard-layout">
+  return (
+    <div className="dashboard-layout">
       <Sidebar />
 
       <main className="dashboard-content">
@@ -25,11 +26,11 @@ export default function DashboardLayout() {
           </div>
         </div>
 
-        {/* Stats Cards Grid (4-ta kaar ee sare) */}
+        {/* Stats Cards Grid */}
         <div className="stats-grid">
           <div className="stats-card">
             <div className="stats-info">
-              <h3>Active Journeys</h3>
+              <span className="stats-label">Active Journeys</span>
               <p className="stats-value">3</p>
             </div>
             <div className="stats-icon blue">
@@ -39,7 +40,7 @@ export default function DashboardLayout() {
 
           <div className="stats-card">
             <div className="stats-info">
-              <h3>Progress</h3>
+              <span className="stats-label">Progress</span>
               <p className="stats-value">50%</p>
             </div>
             <div className="stats-icon orange">
@@ -49,7 +50,7 @@ export default function DashboardLayout() {
 
           <div className="stats-card">
             <div className="stats-info">
-              <h3>Completed Tasks</h3>
+              <span className="stats-label">Completed Tasks</span>
               <p className="stats-value">8</p>
             </div>
             <div className="stats-icon green">
@@ -59,7 +60,7 @@ export default function DashboardLayout() {
 
           <div className="stats-card">
             <div className="stats-info">
-              <h3>Total Tasks</h3>
+              <span className="stats-label">Total Tasks</span>
               <p className="stats-value">16</p>
             </div>
             <div className="stats-icon yellow">
@@ -119,8 +120,7 @@ export default function DashboardLayout() {
                 </div>
               </div>
 
-
-          <div className="stage-item">
+              <div className="stage-item">
                 <div className="stage-info-top">
                   <span className="stage-badge green-badge">2</span>
                   <h4>Miqat</h4>
@@ -134,23 +134,53 @@ export default function DashboardLayout() {
             </div>
           </div>
         </div>
-<section className="bottom-cards-grid">
-  <div className="bottom-card prayer-card">
-    <h3>Daily Prayers</h3>
-    <p>Track your daily prayers.</p>
-  </div>
 
-  <div className="bottom-card quran-card">
-    <h3>Quran Study</h3>
-    <p>Read and reflect on Quran verses.</p>
-  </div>
+        {/* Bottom Cards Grid */}
+        <section className="bottom-cards-grid">
+          <div className="bottom-card prayer-card">
+            <div className="bottom-card-icon">
+              <i className="fas fa-heart"></i>
+            </div>
+            <div className="bottom-card-info">
+              <span className="bottom-card-label">Daily Practice</span>
+              <h3>Daily Prayers</h3>
+              <p>Track your daily prayers.</p>
+            </div>
+            <div className="bottom-arrow">
+              <i className="fas fa-arrow-right"></i>
+            </div>
+          </div>
 
-  <div className="bottom-card community-card">
-    <h3>Community</h3>
-    <p>Connect with fellow pilgrims.</p>
-  </div>
-  </section>
-  </main>
-  </div>
+          <div className="bottom-card quran-card">
+            <div className="bottom-card-icon">
+              <i className="fas fa-book-open"></i>
+            </div>
+            <div className="bottom-card-info">
+              <span className="bottom-card-label">Spiritual Growth</span>
+              <h3>Quran Study</h3>
+              <p>Read and reflect on Quran verses.</p>
+            </div>
+            <div className="bottom-arrow">
+              <i className="fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <div className="bottom-card community-card">
+            <div className="bottom-card-icon">
+              <i className="fas fa-users"></i>
+            </div>
+            <div className="bottom-card-info">
+              <span className="bottom-card-label">Connect</span>
+              <h3>Community</h3>
+              <p>Connect with fellow pilgrims.</p>
+            </div>
+            <div className="bottom-arrow">
+              <i className="fas fa-arrow-right"></i>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
   );
-  }
+}
