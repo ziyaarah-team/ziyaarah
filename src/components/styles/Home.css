@@ -88,35 +88,6 @@
   background: #eefaf5;
   border-color: #eefaf5;
 }
-.hero-image {
-  flex: 1;
-  max-width: 700px;
-  position: relative;
-
-}
-
-.hero-image img {
-  width: 100%;
-  height: 450px;
-  display: block;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-
-/* HERO BUTTONS 
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 25px;
-}
-
-  .hero-content {
-    max-width: 100%;
-     flex: 1;
-  }
-*/
 .btn {
   padding: 14px 24px;
   border: none;
