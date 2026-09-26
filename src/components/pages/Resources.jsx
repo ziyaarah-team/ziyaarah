@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import "../styles/Resources.css";
 
@@ -6,49 +6,40 @@ export default function Resources() {
     return (
         <div className="app-container">
             {/* Sidebar */}
-            <aside className="sidebar">
-                <div>
-                    {/* Logo / Brand */}
-                    <div className="brand-container">
-                        <div className="brand-logo">Z</div>
-                        <div>
-                            <h1 className="brand-title">Ziyarah</h1>
-                            <span className="brand-subtitle">Journey to Hajj</span>
-                        </div>
-                    </div>
+           <aside className="sidebar">
+  <div>
+    <div className="brand-container">
+      <div className="brand-logo"> ✧</div>
 
-                    {/* Navigation Links */}
-                    <nav className="nav-menu">
-                        <Link to="/dashboard" className="nav-link">
-                            <i className="fa-solid fa-house"></i> Dashboard
-                        </Link>
-                        <Link to="/hajj-planner" className="nav-link">
-                            <i className="fa-solid fa-map"></i> Hajj Planner
-                        </Link>
-                        <Link to="/ritual-tracker" className="nav-link">
-                            <i className="fa-solid fa-route"></i> Ritual Tracker
-                        </Link>
-                        <Link to="/resources" className="nav-link active">
-                            <i className="fa-solid fa-book-open"></i> Resources
-                        </Link>
-                    </nav>
-                </div>
+      <div>
+        <h1 className="brand-title">Ziyaarah</h1>
+        <span className="brand-subtitle">Journey Planner</span>
+      </div>
+    </div>
 
-                {/* User Profile Section */}
-                <div className="user-section">
-                    <div className="user-info">
-                        <div className="user-avatar">A</div>
-                        <div>
-                            <p className="user-name">amina</p>
-                            <p className="user-email">amina@gmail.com</p>
-                        </div>
-                    </div>
-                    <Link to="/signout" className="sign-out-btn">
-                        <i className="fa-solid fa-right-from-bracket"></i> Sign Out
-                    </Link>
-                </div>
-            </aside>
+    <nav className="nav-menu">
+      <Link to="/dashboard">
+        <span>⌂</span>
+        Dashboard
+      </Link>
 
+      <Link to="/trips">
+        <span>▣</span>
+        Trip Planner
+      </Link>
+
+      <Link to="/ritual-tracker">
+        <span>✓</span>
+        Ritual Tracker
+      </Link>
+
+      <Link to="/resources" className="active">
+        <span>▤</span>
+        Resources
+      </Link>
+    </nav>
+  </div>
+</aside>
             {/* Main Content Area */}
             <main className="main-content">
                 {/* Header Title */}
@@ -167,6 +158,7 @@ export default function Resources() {
                     </div>
                 </section>
             </main>
-        </div>
+            </div>
+        
     );
-}
+    }

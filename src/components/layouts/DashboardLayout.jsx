@@ -17,15 +17,14 @@ export default function DashboardLayout() {
 
         {/* Quote Banner */}
         <div className="quote-banner">
-          <div className="quote-icon">
+          <div className="quote-icon">✧</div>
             <i className="fas fa-star"></i>
-          </div>
+  
           <div className="quote-content">
             <span className="quote-tag">Quran & Sunnah</span>
             <p className="quote-text">"And Allah is with those who fear Him and those who are doers of good."</p>
           </div>
-        </div>
-
+       </div>
         {/* Stats Cards Grid */}
         <div className="stats-grid">
           <div className="stats-card">
