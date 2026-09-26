@@ -11,7 +11,6 @@ import Prayers from "../pages/Prayers";
 import Events from "../pages/Events";
 import Contact from "../pages/Contact";
 import Resources from "../pages/Resources";
-
 export default function AppRoutes() {
   return (
     <Routes>
