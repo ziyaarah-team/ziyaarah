@@ -438,10 +438,14 @@ body {
 }
 
 /* Responsive design adjustments */
-@media (max-width: 768px) {
-    .sidebar {
-        display: none;
-    }
+    @media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    position: relative;
+  }
+}
     .filters-bar {
         flex-direction: column;
     }
@@ -453,4 +457,3 @@ body {
     .resource-row-content {
         max-width: 100%;
     }
-}

@@ -79,7 +79,7 @@ export default function DashboardLayout() {
               <span className="view-details-link">View Details</span>
             </div>
             <div className="journey-main-info">
-              <h3>Umrah 2024 - Spring</h3>
+              <h3>Umrah 2026 - Spring</h3>
               <p><i className="fas fa-kaaba"></i> Umrah Pilgrimage</p>
             </div>
             <div className="progress-section">
@@ -92,8 +92,8 @@ export default function DashboardLayout() {
               </div>
             </div>
             <div className="journey-dates">
-              <div><i className="fas fa-calendar-plus"></i> Start: 3/14/2024</div>
-              <div><i className="fas fa-calendar-check"></i> End: 3/21/2024</div>
+              <div><i className="fas fa-calendar-plus"></i> Start: 3/14/2027</div>
+              <div><i className="fas fa-calendar-check"></i> End: 3/21/2027</div>
             </div>
           </div>
 
