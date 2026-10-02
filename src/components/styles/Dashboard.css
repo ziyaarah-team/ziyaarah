@@ -1,83 +1,98 @@
-.dashboard-layout {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: #f8fafc;
-  color: #0f172a;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+/* =========================================
+   ZIYAARAH DASHBOARD
+   ========================================= */
+
+* {
   box-sizing: border-box;
 }
 
-.dashboard-layout *,
-.dashboard-layout *::before,
-.dashboard-layout *::after {
-  box-sizing: border-box;
+.dashboard-layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  background: #e8eeeb;
+  color: #17251f;
+  font-family: "Inter", Arial, sans-serif;
 }
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
 
 .dashboard-content {
   flex: 1;
-  width: 100%;
   min-width: 0;
-  min-height: 100vh;
-  padding: 32px 40px 60px;
-  background: #f8fafc;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  width: auto;
+
+  padding: 12px 32px 20px;
+
+  overflow-x: hidden;
+
+  background: #e8eeeb;
 }
 
+
+/* =========================================
+   WELCOME HEADER
+   ========================================= */
+
 .welcome-header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  margin-bottom: 4px;
+  margin-bottom: 22px;
 }
 
 .welcome-header h1 {
-  margin: 0 0 4px;
-  color: #0f172a;
+  margin: 0 0 7px;
+
   font-size: 28px;
-  line-height: 1.2;
-  font-weight: 750;
-  letter-spacing: -0.5px;
+  font-weight: 700;
+  line-height: 1.25;
+
+  color: #17251f;
 }
 
 .welcome-header p {
   margin: 0;
-  color: #64748b;
+
   font-size: 14px;
-  line-height: 1.5;
+
+  color: #718078;
 }
 
+
+/* =========================================
+   QUOTE BANNER
+   ========================================= */
+
 .quote-banner {
-  position: relative;
-  width: 100%;
-  padding: 20px 25px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  color: #ffffff;
   display: flex;
   align-items: center;
-  gap: 17px;
-  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.14);
+  gap: 18px;
+  width: 100%;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+
+  background: #14532d;
+  color: #ffffff;
+  border-radius: 14px;
 }
 
 .quote-icon {
-  width: 43px;
-  height: 43px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.17);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+
+  background: #166534;
+  color: #facc15;
+  border-radius: 12px;
 }
 
 .quote-content {
@@ -86,286 +101,661 @@
 
 .quote-tag {
   display: block;
-  margin-bottom: 5px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+
+  color: #bbf7d0;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .quote-text {
   margin: 0;
   color: #ffffff;
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
 }
+
+/* =========================================
+   STATS
+   ========================================= */
 
 .stats-grid {
   display: grid;
+
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+
+  gap: 16px;
+
+  width: 100%;
+
+  margin-bottom: 22px;
 }
 
 .stats-card {
-  padding: 20px;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  background: #ffffff;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 15px;
-  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.025);
+
+  min-width: 0;
+  min-height: 112px;
+
+  padding: 20px;
+
+  border: 1px solid #e3e9e5;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 8px rgba(20, 50, 38, 0.04);
 }
 
 .stats-info {
   min-width: 0;
 }
 
-.stats-label {
-  display: block;
-  margin-bottom: 7px;
-  color: #64748b;
-  font-size: 11px;
-  font-weight: 700;
+.stats-info h3 {
+  margin: 0 0 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #748079;
 }
 
 .stats-value {
   margin: 0;
-  color: #0f172a;
-  font-size: 26px;
+
+  font-size: 28px;
   font-weight: 750;
+  line-height: 1;
+
+  color: #17251f;
 }
 
 .stats-icon {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
-  border-radius: 11px;
-  display: flex; 
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-}
-.stats-icon {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
+
+  flex: 0 0 44px;
+
+  width: 44px;
+  height: 44px;
+
   border-radius: 11px;
-  display: flex !important; /* Xaqiiji inuu soo muuqdo */
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
+
+  font-size: 17px;
 }
 
-.stats-icon.blue { background: #eff6ff; color: #2563eb; }
-.stats-icon.orange { background: #fff7ed; color: #ea580c; }
-.stats-icon.green { background: #ecfdf5; color: #059669; }
-.stats-icon.yellow { background: #fefce8; color: #ca8a04; }
+
+/* DARK BLUE */
+
+.stats-icon.blue {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+/* DARK ORANGE */
+.stats-icon.orange {
+  background: #9a4d0b;
+  color: #ffffff;
+}
+
+/* DARK GREEN */
+
+.stats-icon.green {
+  background: #166534;
+  color: #ffffff;
+}
+
+
+/* DARK YELLOW */
+
+.stats-icon.yellow {
+  background: #a16207;
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN DASHBOARD GRID
+   ========================================= */
 
 .dashboard-grid {
-  width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 20px;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(0, 1fr);
+
+  gap: 18px;
+
+  width: 100%;
+
+  margin-bottom: 22px;
 }
+
+
+/* =========================================
+   SHARED CARD
+   ========================================= */
 
 .current-journey-card,
 .journey-stages-card {
-  padding: 24px;
-  border: 1px solid #e2e8f0;
-  border-radius: 17px;
+  min-width: 0;
+
+  padding: 22px;
+
+  border: 1px solid #e3e9e5;
+  border-radius: 14px;
+
   background: #ffffff;
-  box-shadow: 0 2px 7px rgba(15, 23, 42, 0.025);
+
+  box-shadow: 0 2px 8px rgba(20, 50, 38, 0.04);
 }
+
+
+/* =========================================
+   CARD HEADERS
+   ========================================= */
 
 .card-header-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 22px;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
 }
 
 .card-title-box {
   display: flex;
   align-items: center;
-  gap: 11px;
-  color: #0f172a;
+
+  gap: 9px;
+
+  min-width: 0;
+
+  color: #1c3d31;
+
+  font-size: 14px;
   font-weight: 700;
 }
 
-.view-details-link, .stages-count {
-  color: #059669;
-  font-size: 11px;
-  font-weight: 700;
+.card-title-box i {
+  color: #287255;
+}
+
+.view-details-link,
+.stages-count {
+  flex-shrink: 0;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.view-details-link {
+  color: #287255;
+
   cursor: pointer;
 }
 
+.stages-count {
+  color: #89938e;
+}
+
+
+/* =========================================
+   CURRENT JOURNEY
+   ========================================= */
+
+.journey-main-info {
+  margin-bottom: 22px;
+}
+
 .journey-main-info h3 {
-  margin: 0 0 6px;
-  color: #0f172a;
-  font-size: 19px;
+  margin: 0 0 7px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  color: #17251f;
 }
 
 .journey-main-info p {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
   margin: 0;
-  color: #64748b;
-  font-size: 12px;
+
+  font-size: 13px;
+
+  color: #7b8580;
 }
 
+.journey-main-info p i {
+  color: #287255;
+}
+
+
+/* =========================================
+   PROGRESS
+   ========================================= */
+
 .progress-section {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .progress-labels {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
   margin-bottom: 8px;
-  font-size: 11px;
-  color: #475569;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #67736d;
+}
+
+.progress-labels span:last-child {
+  color: #287255;
 }
 
 .progress-bar-container {
   width: 100%;
   height: 8px;
-  background: #ecfdf5;
-  border-radius: 10px;
+
   overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #e8eeeb;
 }
 
 .progress-bar-fill {
   height: 100%;
-  background: #059669;
+
+  border-radius: inherit;
+
+  background: #2d7756;
 }
 
+
+/* =========================================
+   JOURNEY DATES
+   ========================================= */
+
 .journey-dates {
-  padding-top: 15px;
-  border-top: 1px solid #f1f5f9;
   display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  color: #64748b;
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #edf0ee;
 }
+
+.journey-dates div {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 12px;
+
+  color: #727d77;
+}
+
+.journey-dates i {
+  color: #527565;
+}
+
+
+/* =========================================
+   JOURNEY STAGES
+   ========================================= */
 
 .stages-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+
+  gap: 15px;
 }
 
 .stage-item {
-  padding: 12px;
-  background: #f8fafc;
+  padding: 13px 14px;
+
   border-radius: 10px;
-  border: 1px solid #f1f5f9;
+
+  background: #f7faf8;
+
+  border: 1px solid #e9efeb;
 }
 
 .stage-info-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
+
+  gap: 9px;
+
+  min-width: 0;
 }
 
 .stage-badge {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #059669;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+
+  flex: 0 0 25px;
+
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.green-badge {
+  background: #dceee5;
+  color: #277051;
+}
+
+.stage-info-top h4 {
+  flex: 1;
+
+  min-width: 0;
+
+  margin: 0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #26382f;
 }
 
 .stage-status {
-  font-size: 9px;
-  color: #059669;
-  background: #ecfdf5;
-  padding: 3px 8px;
-  border-radius: 10px;
+  flex-shrink: 0;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  color: #3d8063;
+}
+
+.stage-item p {
+  margin: 9px 0 7px 34px;
+
+  font-size: 11px;
+
+  color: #7b8580;
 }
 
 .mini-progress-bar {
-  width: 100%;
+  width: calc(100% - 34px);
+
   height: 5px;
-  background: #e2e8f0;
-  border-radius: 5px;
-  margin-top: 6px;
+
+  margin-left: 34px;
+
   overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #e3ebe6;
 }
 
 .mini-fill {
   height: 100%;
-  background: #059669;
+
+  border-radius: inherit;
+
+  background: #4a8a6d;
 }
 
+
+/* =========================================
+   BOTTOM CARDS
+   ========================================= */
+
 .bottom-cards-grid {
-  width: 100%;
   display: grid;
+
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+
+  gap: 16px;
+
+  width: 100%;
 }
 
 .bottom-card {
+  min-width: 0;
+  min-height: 110px;
+
   padding: 20px;
-  border-radius: 16px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+
+  border-radius: 14px;
+
+  border: 1px solid #e3e9e5;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 8px rgba(20, 50, 38, 0.04);
 }
 
-.prayer-card { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
-.quran-card { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
-.community-card { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+.bottom-card h3 {
+  margin: 0 0 8px;
 
-.bottom-card-icon {
-  width: 45px;
-  height: 45px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 17px;
+  font-size: 15px;
+
+  color: #21362c;
 }
 
-.bottom-card-info {
-  flex: 1;
-}
-
-.bottom-card-label {
-  font-size: 9px;
-  text-transform: uppercase;
-  opacity: 0.7;
-  font-weight: 700;
-}
-
-.bottom-card-info h3 {
-  margin: 2px 0;
-  font-size: 14px;
-  color: #ffffff;
-}
-
-.bottom-card-info p {
+.bottom-card p {
   margin: 0;
-  font-size: 11px;
-  opacity: 0.9;
-  color: #ffffff;
-}
 
-.bottom-arrow {
   font-size: 12px;
-  opacity: 0.8;
+  line-height: 1.5;
+
+  color: #7b8580;
+}
+.prayer-card {
+  background: #166534 !important;
+  color: #ffffff !important;
+  border-top: 3px solid #14532d !important;
 }
 
-@media (max-width: 1024px) {
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .dashboard-grid { grid-template-columns: 1fr; }
-  .bottom-cards-grid { grid-template-columns: 1fr; }
+.quran-card {
+  background: #a16207 !important;
+  color: #ffffff !important;
+  border-top: 3px solid #854d0e !important;
+}
+
+.community-card {
+  background: #1e3a8a !important;
+  color: #ffffff !important;
+  border-top: 3px solid #172554 !important;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+  .dashboard-content {
+    padding: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /*
+     IMPORTANT:
+     Sidebar goes ABOVE dashboard content.
+  */
+
+  .dashboard-layout {
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    min-width: 0;
+
+    padding: 18px 16px 30px;
+
+    overflow-x: hidden;
+  }
+
+  .welcome-header {
+    margin-bottom: 18px;
+  }
+
+  .welcome-header h1 {
+    font-size: 23px;
+  }
+
+  .welcome-header p {
+    font-size: 13px;
+  }
+
+  .quote-banner {
+    align-items: flex-start;
+
+    padding: 16px;
+
+    gap: 12px;
+  }
+
+  .quote-icon {
+    flex-basis: 42px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+  .quote-text {
+    font-size: 13px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+  }
+
+  .stats-card {
+    min-height: 100px;
+
+    padding: 15px;
+  }
+
+  .stats-value {
+    font-size: 24px;
+  }
+
+  .stats-icon {
+    flex-basis: 38px;
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .bottom-cards-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 520px) {
+
+  .dashboard-content {
+    padding: 14px 12px 24px;
+  }
+
+  .welcome-header h1 {
+    font-size: 21px;
+  }
+
+  .quote-banner {
+    padding: 14px;
+  }
+
+  .quote-icon {
+    flex-basis: 38px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-card {
+    min-height: 88px;
+  }
+
+  .current-journey-card,
+  .journey-stages-card {
+    padding: 17px;
+  }
+
+  .card-header-flex {
+    align-items: flex-start;
+  }
+
+  .journey-dates {
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+  .stage-info-top {
+    flex-wrap: wrap;
+  }
+
+  .stage-status {
+    margin-left: 34px;
+  }
 }
