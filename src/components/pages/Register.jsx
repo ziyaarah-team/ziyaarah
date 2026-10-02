@@ -2,13 +2,11 @@ import { registerUser } from "../../services/authService";
 import useAuthStore from "../../store/authStore";
 import  Input from "../common/Input";
 import Button from "../common/Button";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function Register() {
     const [error, setError] = useState("");
 const setAuth = useAuthStore((state) => state.setAuth);
-const navigate = useNavigate();
    const handleSubmit = async (e) => {
         e.preventDefault();
     
@@ -42,7 +40,8 @@ const navigate = useNavigate();
 
     
         setError("");
-         const data = await registerUser(email, password);
+      
+         const data = await registerUser(fullName,email, password);
          setAuth(data.token,{
             fullName,
             email,
@@ -51,9 +50,8 @@ const navigate = useNavigate();
          
 
         alert("Registration successful!");
-  navigate("/dashboard");
+  window.location.href = "/";
 }
-
 catch (error) {
       setError(error.message);
     }
@@ -71,6 +69,7 @@ catch (error) {
                     <h2>Create Your Account</h2>
                     <p>Join our community and start your spiritual journey today!</p>
                 </div>
+
 
                 <form onSubmit={handleSubmit}>
                       {error && (
