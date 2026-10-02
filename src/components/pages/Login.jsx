@@ -1,32 +1,13 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
 import Input from "../common/Input";
 import Button from "../common/Button";
-import { loginUser } from "../../services/authService";
-import useAuthStore from "../../store/authStore";
 
 function Login() {
-  const navigate = useNavigate();
-  const setAuth = useAuthStore((state) => state.setAuth);
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const data = await loginUser(email, password);
+    alert("Login submitted!");
 
-      setAuth(data.token, { email });
-
-      alert("Login successful!");
-
-      navigate("/dashboard");
-    } catch (error) {
-      alert(error.message);
-    }
+    window.location.href = "/dashboard";
   };
 
   return (
@@ -47,16 +28,12 @@ function Login() {
             label="Email"
             placeholder="Enter your email"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
 
           <Input
             label="Password"
             placeholder="Enter your password"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
           />
 
           <div className="form-options">
